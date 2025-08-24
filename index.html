@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Balls Game</title>
+    <style>
+        body { background: #111; margin: 0; overflow: hidden; color: #fff; }
+        #gameCanvas { display: block; margin: 0 auto; background: #111; }
+        .ui-bar { 
+            position: absolute; 
+            top: 10px; 
+            left: 0; right: 0; 
+            text-align: center; 
+            z-index: 10;
+        }
+        button {
+            margin: 0 8px;
+            font-size: 18px;
+            background: #23235a;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 7px 17px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px #15143a55;
+        }
+        button:hover { background: #373798; }
+        @media (max-width: 600px) {
+            #gameCanvas { width: 98vw !important; height: 70vw !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="ui-bar">
+        <button onclick="restartGame()">Restart</button>
+        <button onclick="copyShareLink()">Share</button>
+        <span id="copiedMsg" style="display:none;color:#aff;">Link Copied!</span>
+    </div>
+    <canvas id="gameCanvas" width="800" height="800"></canvas>
+    <script src="game.js"></script>
+</body>
+</html>
