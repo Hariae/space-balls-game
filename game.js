@@ -151,7 +151,7 @@ function loop() {
         let gone = balls[i].update();
         balls[i].draw();
         if (gone) {
-            // balls.splice(i,1);
+            balls.splice(i,1);
             toSpawn += 2;
         }
     }
