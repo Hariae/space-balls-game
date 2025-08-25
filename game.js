@@ -8,7 +8,7 @@ const OPENING_ANGLE = 2 * Math.PI / 20; // 1/20 of the circle
 const OPENING_START = -Math.PI / 6; // Rotate opening toward top by default
 const GRAVITY = 0.07;
 let balls = [], animId = null, running = true;
-const BALL_RADIUS = 18;
+const BALL_RADIUS = 2;
 const COLORS = ['#00fff5', '#e5ff00', '#ff00d4', '#00ff9d', '#ff3366', '#00aaff', '#ffe100'];
 let tingSound = null;
 
@@ -151,7 +151,7 @@ function loop() {
         let gone = balls[i].update();
         balls[i].draw();
         if (gone) {
-            balls.splice(i,1);
+            // balls.splice(i,1);
             toSpawn += 2;
         }
     }
